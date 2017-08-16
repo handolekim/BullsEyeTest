@@ -7,29 +7,36 @@
 //
 
 import XCTest
+@testable import BullsEye  // Unit tests can access to the class and methods.
 
 class BullsEyeTests: XCTestCase {
     
+    var gameUnderTest: BullsEyeGame!
+    
+    /* This creates SUT (system under test) object at the class level.
+     * So, this test class can access SUT's object's properties and methods.
+     */
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        gameUnderTest = BullsEyeGame()
+        gameUnderTest.startNewGame()          // targetValue created
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        gameUnderTest = nil                   // release SUT object
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    /* This is a test function uses XCTAssert to test model.
+     */
+    func testScoreIsComputed() {
+        // 1. given
+        let guess = gameUnderTest.targetValue + 5
+        
+        // 2. when
+        _ = gameUnderTest.check(guess: guess)
+        
+        // 3. then
+        XCTAssertEqual(gameUnderTest.scoreRound, 95)
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
 }
