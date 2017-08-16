@@ -56,15 +56,23 @@
 		40907E281CA8C0C500CAB5AC /* BullsEye */ = {
 			isa = PBXGroup;
 			children = (
-				40907E291CA8C0C500CAB5AC /* AppDelegate.swift */,
+				9C6431541F44E04700B30727 /* Supporting Files */,
 				40907E3B1CA8EAA200CAB5AC /* BullsEyeGame.swift */,
 				40907E2B1CA8C0C500CAB5AC /* ViewController.swift */,
 				40907E2D1CA8C0C500CAB5AC /* Main.storyboard */,
 				40907E301CA8C0C500CAB5AC /* Assets.xcassets */,
+			);
+			path = BullsEye;
+			sourceTree = "<group>";
+		};
+		9C6431541F44E04700B30727 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				40907E291CA8C0C500CAB5AC /* AppDelegate.swift */,
 				40907E321CA8C0C500CAB5AC /* LaunchScreen.storyboard */,
 				40907E351CA8C0C500CAB5AC /* Info.plist */,
 			);
-			path = BullsEye;
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
